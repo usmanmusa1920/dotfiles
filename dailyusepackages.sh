@@ -48,5 +48,9 @@
         jt -t chesterish (for black theme)
         jt -r (for white theme)
     
+    kubernetes
+        sudo snap install --classic  kubectl
+    docker
+    ansible
 
 """

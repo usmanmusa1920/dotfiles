@@ -2,11 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# running my custom bashrc
-if [ -f ~/.my_bashrc ]; then
-    . ~/.my_bashrc 
-fi
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -108,6 +103,11 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
+fi
+
+# running my custom bashrc
+if [ -f ~/.my_bashrc ]; then
+    . ~/.my_bashrc 
 fi
 
 # enable programmable completion features (you don't need to enable
