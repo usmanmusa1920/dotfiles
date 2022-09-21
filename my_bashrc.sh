@@ -1,4 +1,4 @@
-echo "FROM my_bashrc"
+echo "FROM my bashrc"
 
 # cat<<'EOF'
 #            _..._
@@ -17,12 +17,6 @@ echo "FROM my_bashrc"
 # EOF
 
 # These are my custom aliases
-# alias workon='source ./mypro.sh'
-
-# for zazzone
-alias sv='source venv/bin/activate'
-alias zazzone='cd ~/Desktop/acode/zazzone'
-alias spz='zazzone  && sv && pm'
 
 # for sakyum
 alias sv='source venv/bin/activate'
