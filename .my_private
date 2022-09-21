@@ -1,0 +1,11 @@
+# This are api
+export GITHUB_API="github_api"
+export BITBUCKET_API="bitbucket_api"
+export IBMQ_API="ibmq_api"
+
+# This export are for heroku websites
+export SECRET_KEY="secret_key"
+export DEBUG_VALUE="debug_value"
+export GMAIL_APP_PWD="gmail_app_password"
+export YAHOO_APP_PWD="yahoo_app_password"
+export MAIL_ADDRESS="email_address"

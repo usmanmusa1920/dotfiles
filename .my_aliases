@@ -1,0 +1,103 @@
+# .bash_profile is used for loging shell
+# it is the file that run when ever we open new terminal window on Mac, this might be not exactly on linux. This loging shell run any time you ssh into a machine and things like that.
+
+# bashrc is the file that run for every sub shell
+# .bashrc is used for non loging shell (sub shell), and if we type bash it will start a sub shell
+
+# cat<<'EOF'
+#            _..._
+#          .'     '.
+#         /  _   _  \
+#         | (o)_(o) |
+#          \(     ) /
+#          //'._.'\ \
+#         //   .   \ \
+#        ||   .     \ \
+#        |\   :     / |
+#        \ `) '   (`  /_
+#      _)``".____,.'"` (_
+#      )     )'--'(     (
+#       '---`      `---`
+# EOF
+
+# These are my custom aliases
+# -------------------------------------------------------------
+# virtual environment alias
+alias sv='source venv/bin/activate'
+
+
+# django aliases
+alias pm='python manage.py runserver'
+# migrating database changes
+alias pmigrate='python manage.py migrate'
+# making database migrations
+alias pmake='python manage.py makemigrations'
+# launching my project in python shell
+alias pshell='python manage.py shell'
+
+
+# Entering into my project folder
+#     alias <project_working_on>='cd ~/Desktop/acode/<project_working_on>'
+
+# Entering into my project folder using the above aliase,
+# activating it vartual environment, and
+# launching up it server (for django)
+#     alias <project_name[0]pproject_name[0]>='<project_working_on>  && sv && pm'
+# 
+#     The prototype of the two above alias look like:
+#         alias facebook='cd ~/Desktop/acode/facebook'
+#         alias fpf='facebook && sv && pm'
+# 
+#           PUT YOUR OWN  HERE...
+# 
+# -------------------------------------------------------------
+
+
+# print your github api key on screen
+alias gb='echo $GITHUB_API'
+
+
+# git aliases
+alias lg='git lg'
+alias ssg='git status'
+alias b='git branch -a'
+alias gr='git remote -v'
+alias ga='git add -A' # OR git add .
+alias cgm='git commit -m'
+alias gpush='git push origin master'
+alias gd='git push origin -d'
+
+
+# jupyter aliases
+alias jn='jupyter notebook' # to launch use `jupyter notebook` --OR-- `jupyter-notebook`
+alias jnv='jupyter-notebook --version'
+alias jl='jupyter lab' # to launch use `jupyter lab` --OR-- `jupyter-lab`
+alias jlv='jupyter-lab --version'
+
+# activating my jupyter virtual environment which is in my home directory
+alias jenv='source ~/jenv/bin/activate'
+
+# activating my jupyter virtual environment which is
+# in my home directory and then launching jupyter lab
+alias jlab='source ~/jenv/bin/activate && cd ~/Desktop && jupyter-lab'
+
+# activating my jupyter virtual environment which is
+# in my home directory and then launching jupyter notebook
+alias jnote='source ~/jenv/bin/activate && cd ~/Desktop && jupyter-notebook'
+
+
+alias nj='nodejs' # to run javasrcipt file ``` nodejs <file_name> ```
+alias python='python3.10'
+
+
+# shortcut aliases
+alias tl='uptime -p' # dispaly the date since when the system is up running without turning off
+alias x='clear && source ~/.bashrc' # for clearing terminal and sourcing bashrc file
+alias c='clear' # for clearing terminal
+alias cr='nproc --all' # to see how many core in your system
+alias d='cd ~/Desktop' # for going to Desktop directory
+alias ddc='deactivate' # for deactivating virtual environment
+
+# kubectl alias from minikube
+# alias kubectl="minikube kubectl --"
+# -------------------------------------------------------------

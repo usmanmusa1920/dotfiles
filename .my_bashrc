@@ -1,0 +1,171 @@
+# Shell prompt based on the Solarized Dark theme.
+# Screenshot: http://i.imgur.com/EkEtphC.png
+# Heavily inspired by @necolas’s prompt: https://github.com/necolas/dotfiles
+# iTerm → Profiles → Text → use 13pt Monaco with 1.1 vertical spacing.
+
+
+if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
+	export TERM='gnome-256color';
+elif infocmp xterm-256color >/dev/null 2>&1; then
+	export TERM='xterm-256color';
+fi;
+
+prompt_git() {
+	local s='';
+	local branchName='';
+
+	# Check if the current directory is in a Git repository.
+	if [ $(git rev-parse --is-inside-work-tree &>/dev/null; echo "${?}") == '0' ]; then
+
+		# check if the current directory is in .git before running git checks
+		if [ "$(git rev-parse --is-inside-git-dir 2> /dev/null)" == 'false' ]; then
+
+			# Ensure the index is up to date.
+			git update-index --really-refresh -q &>/dev/null;
+
+			# Check for uncommitted changes in the index.
+			if ! $(git diff --quiet --ignore-submodules --cached); then
+				s+='+';
+			fi;
+
+			# Check for unstaged changes.
+			if ! $(git diff-files --quiet --ignore-submodules --); then
+				s+='!';
+			fi;
+
+			# Check for untracked files.
+			if [ -n "$(git ls-files --others --exclude-standard)" ]; then
+				s+='?';
+			fi;
+
+			# Check for stashed files.
+			if $(git rev-parse --verify refs/stash &>/dev/null); then
+				s+='$';
+			fi;
+
+		fi;
+
+		# Get the short symbolic ref.
+		# If HEAD isn’t a symbolic ref, get the short SHA for the latest commit
+		# Otherwise, just give up.
+		branchName="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
+			git rev-parse --short HEAD 2> /dev/null || \
+			echo '(unknown)')";
+
+		[ -n "${s}" ] && s=" [${s}]";
+
+		echo -e "${1}${branchName}${2}${s}";
+	else
+		return;
+	fi;
+}
+
+
+if tput setaf 1 &> /dev/null; then
+	tput sgr0; # reset colors
+	bold=$(tput bold);
+	reset=$(tput sgr0);
+	# Solarized colors, taken from http://git.io/solarized-colors.
+	black=$(tput setaf 0);
+	blue=$(tput setaf 153);
+	green=$(tput setaf 71);
+	orange=$(tput setaf 166);
+	red=$(tput setaf 167);
+	white=$(tput setaf 15);
+	yellow=$(tput setaf 228);
+else
+	bold='';
+	reset="\e[0m";
+	black="\e[1;30m";
+	blue="\e[1;34m";
+	green="\e[1;32m";
+	orange="\e[1;33m";
+	red="\e[1;31m";
+	white="\e[1;37m";
+	yellow="\e[1;33m";
+fi;
+
+# -------------------------------------------------------------
+# Regular (foreground)
+black_reg="\e[0;30m"
+red_reg="\e[0;31m"
+green_reg="\e[0;32m"
+yellow_reg="\e[0;33m"
+blue_reg="\e[0;34m"
+purple_reg="\e[0;35m"
+cyan_reg="\e[0;36m"
+white_reg="\e[0;37m"
+
+# Bold (mostly use, it is the default one I use for the colors)
+black_bold="\e[1;30m"
+red_bold="\e[1;31m"
+green_bold="\e[1;32m"
+yellow_bold="\e[1;33m"
+blue_bold="\e[1;34m"
+purple_bold="\e[1;35m"
+cyan_bold="\e[1;36m"
+white_bold="\e[1;37m"
+
+# Underline
+#   NB: This don't actually work for my linux mint machine (20.3)
+black_un="\e[1;30m"
+red_un="\e[1;31m"
+green_un="\e[1;32m"
+yellow_un="\e[1;33m"
+blue_un="\e[1;34m"
+purple_un="\e[1;35m"
+cyan_un="\e[1;36m"
+white_un="\e[1;37m"
+
+# Background
+black_bg="\e[40m"
+red_bg="\e[41m"
+green_bg="\e[42m"
+yellow_bg="\e[43m"
+blue_bg="\e[44m"
+purple_bg="\e[45m"
+cyan_bg="\e[46m"
+white_bg="\e[47m"
+
+# Strock
+black_stro="\e[9;30m"
+red_stro="\e[9;31m"
+green_stro="\e[9;32m"
+yellow_stro="\e[9;33m"
+blue_stro="\e[9;34m"
+purple_stro="\e[9;35m"
+cyan_stro="\e[9;36m"
+white_stro="\e[9;37m"
+
+# Text reset
+reset="\[\033[00m" # OR "\e[m"
+# NB: \e == \033
+# -------------------------------------------------------------
+
+# Highlight the user name when logged in as root.
+if [[ "${USER}" == "root" ]]; then
+	userStyle="${red}";
+else
+	userStyle="${orange}";
+fi;
+
+# Highlight the hostname when connected via SSH.
+if [[ "${SSH_TTY}" ]]; then
+	hostStyle="${bold}${red}";
+else
+	hostStyle="${yellow}";
+fi;
+
+
+PS1="$cyan_bold\u" # username
+PS1+="\[$white_bold\]@"
+PS1+="\[$green_bold\]\h" # host
+PS1+="\$(prompt_git \"\[${white}\] on \[${blue}\]\" \"\[${blue}\]\")" # Git repository details
+PS1+="\[$hostStyle\] in:"
+PS1+="\[$green\]\w" # working directory
+PS1+="\[$white_bold\]\n $ $reset" # newline and `$` (and reset color)
+# --------------------------------------------------------------------
+export PS1;
+
+PS2="\[${yellow}\]→ \[${reset}\]";
+export PS2;
