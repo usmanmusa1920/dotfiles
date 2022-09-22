@@ -51,9 +51,10 @@ pip install matplotlib
 
 # Install LinuxMint Applications
 echo "Snap store apps ..."
+sudo apt install snapd
 sudo snap install snap-store
+
 sudo snap install --classic code # vs_code theme (Andromeda italic)
-sudo apt-get install google-chrome
 
 # for devops
 echo "DevOps installation ..."
