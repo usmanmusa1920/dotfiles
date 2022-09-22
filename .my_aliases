@@ -1,0 +1,48 @@
+# .bash_profile is used for loging shell
+# it is the file that run when ever we open new terminal window on Mac, this might be not exactly on linux. This loging shell run any time you ssh into a machine and things like that.
+
+# bashrc is the file that run for every sub shell
+# .bashrc is used for non loging shell (sub shell), and if we type bash it will start a sub shell
+
+
+# cat<<'EOF'
+#            _..._
+#          .'     '.
+#         /  _   _  \
+#         | (o)_(o) |
+#          \(     ) /
+#          //'._.'\ \
+#         //   .   \ \
+#        ||   .     \ \
+#        |\   :     / |
+#        \ `) '   (`  /_
+#      _)``".____,.'"` (_
+#      )     )'--'(     (
+#       '---`      `---`
+# EOF
+
+# These are my custom aliases
+# -------------------------------------------------------------
+# for sakyum
+alias sv='source venv/bin/activate'
+alias sakyum='cd ~/Desktop/acode/sakyum'
+alias sps='sakyum  && sv && pm'
+
+# for manage.py
+alias pm='python3 manage.py runserver'
+alias pmigrate='python3 manage.py migrate'
+alias pmake='python3 manage.py makemigrations'
+alias ds='python manage.py shell'
+
+alias lg='git lg'
+alias jt='jupyter notebook'
+alias python='python3'
+alias clr='clear && source ~/.bashrc'
+
+# kubectl alias from minikube
+# alias kubectl="minikube kubectl --"
+# -------------------------------------------------------------
+
+# This export are for heroku websites
+export SECRET_KEY="4d35693cd2014fe3a9137296af0d64292aac3089d445a5262540e3ca7605"
+export DEBUG_VALUE="False"

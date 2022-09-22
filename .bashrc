@@ -105,10 +105,22 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# running my custom bashrc
-if [ -f ~/.my_bashrc ]; then
-    . ~/.my_bashrc 
-fi
+# -----------------------------------------------------------------------------------
+#                RUNNNG MY DOTFILES HERE!
+# running my custom bashrc, that I added,
+# to make me know git branch I am,
+# the current working directory
+# git command shortcuts
+# some aliases (short hands),
+# running, some other dotfiles, and much more
+
+# Loading dotfiles using for loop:
+# it will load .my_bashrc and .my_aliases always, if this file (.bashrc) runs
+for file in ~/.{my_bashrc,my_aliases}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+# -----------------------------------------------------------------------------------
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
