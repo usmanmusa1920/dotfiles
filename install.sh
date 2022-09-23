@@ -38,13 +38,15 @@ sudo apt-get install python3-pip
 sudo apt-get install python3-venv
 
 pip install mysqlclient # for working with myql
-pip install jupyterlab # launch jupyter-lab
-pip install notebook # launch jupyter notebook
-    pip install jupyterthemes
-    # jt -t chesterish (for black theme)
-    # jt -r (for white theme)
 pip install sqlalchemy
+
+pip install jupyterlab # launch jupyter lab --OR-- jupyter-lab
+pip install notebook # launch jupyter notebook --OR-- jupyter notebook
+
 pip install qiskit
+pip install qiskit-aqua
+pip install qiskit[visualization]
+
 pip install numpy
 pip install matplotlib
 # ------------------------------------------------
