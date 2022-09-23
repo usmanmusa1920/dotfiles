@@ -63,9 +63,7 @@ echo "DevOps installation ..."
 # sudo snap install --classic heroku
 sudo snap install kubectl --classic
 sudo snap install --classic  minikube
-sudo apt install docker.io    ---OR----
-# sudo apt install docker docker-compose docker-doc docker-registry docker.io    ---OR----
-# sudo apt install docker*    ---OR----
+sudo apt install docker.io
 
 sudo apt install ansible ansible
 # ------------------------------------------------

@@ -25,10 +25,10 @@ echo "FROM my bashrc"
 
 # These are my custom aliases
 # -------------------------------------------------------------
-# for sakyum
+# for project I am working on (virtual environment activation)
 alias sv='source venv/bin/activate'
-alias sakyum='cd ~/Desktop/acode/sakyum'
-alias sps='sakyum  && sv && pm'
+alias <project_name>='cd ~/Desktop/acode/<project_name>'
+alias sps='<project_name>  && sv && pm'
 
 # for manage.py
 alias pm='python3 manage.py runserver'
@@ -47,7 +47,7 @@ alias clr='clear && source ~/.bashrc'
 
 # This export are for heroku websites
 export SECRET_KEY="4d35693cd2014fe3a9137296af0d64292aac3089d445a5262540e3ca7605"
-export DEBUG_VALUE="False"
+export DEBUG_VALUE="True"
 
 # -------------------------------------------------------------
 # Regular (foreground)

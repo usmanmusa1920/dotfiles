@@ -23,10 +23,10 @@
 
 # These are my custom aliases
 # -------------------------------------------------------------
-# for sakyum
+# for project I am working on (virtual environment activation)
 alias sv='source venv/bin/activate'
-alias sakyum='cd ~/Desktop/acode/sakyum'
-alias sps='sakyum  && sv && pm'
+alias <project_name>='cd ~/Desktop/acode/<project_name>'
+alias sps='<project_name>  && sv && pm'
 
 # for manage.py
 alias pm='python3 manage.py runserver'
