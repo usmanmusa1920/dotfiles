@@ -46,5 +46,6 @@ alias ddc='deactivate'
 # -------------------------------------------------------------
 
 # This export are for heroku websites
-export SECRET_KEY="4d35693cd2014fe3a9137296af0d64292aac3089d445a5262540e3ca7605"
-export DEBUG_VALUE="False"
+export SECRET_KEY=<secret_key>
+export DEBUG_VALUE=<debug_value>
+
