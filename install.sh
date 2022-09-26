@@ -64,6 +64,8 @@ echo "DevOps installation ..."
 sudo snap install kubectl --classic
 sudo snap install --classic  minikube
 sudo apt install docker.io
+# the below command basically it launch a sub shell
+# sudo usermod -aG docker $USER && newgrp docker
 
 sudo apt install ansible ansible
 # ------------------------------------------------
