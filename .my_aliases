@@ -23,10 +23,10 @@
 
 # These are my custom aliases
 # -------------------------------------------------------------
-# for project I am working on (virtual environment activation)
+# for sakyum
 alias sv='source venv/bin/activate'
-alias <project_name>='cd ~/Desktop/acode/<project_name>'
-alias sps='<project_name>  && sv && pm'
+alias sakyum='cd ~/Desktop/acode/sakyum'
+alias sps='sakyum  && sv && pm'
 
 # for manage.py
 alias pm='python3 manage.py runserver'
@@ -34,7 +34,12 @@ alias pmigrate='python3 manage.py migrate'
 alias pmake='python3 manage.py makemigrations'
 alias ds='python manage.py shell'
 
+# git short aliases
 alias lg='git lg'
+alias ssg='git status'
+alias ga='git add -A' # OR git add .
+alias cgm='git commit -m'
+
 alias jn='jupyter notebook' # launch jupyter notebook --OR-- jupyter notebook
 alias jl='jupyter lab' # launch jupyter lab --OR-- jupyter-lab
 alias python='python3'
@@ -48,4 +53,3 @@ alias ddc='deactivate'
 # This export are for heroku websites
 export SECRET_KEY=<secret_key>
 export DEBUG_VALUE=<debug_value>
-
