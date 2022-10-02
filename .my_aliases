@@ -32,6 +32,7 @@ alias sps='sakyum  && sv && pm'
 alias pm='python3 manage.py runserver'
 alias pmigrate='python3 manage.py migrate'
 alias pmake='python3 manage.py makemigrations'
+alias pshell='python3 manage.py shell'
 alias ds='python manage.py shell'
 
 # git short aliases
@@ -49,7 +50,3 @@ alias ddc='deactivate'
 # kubectl alias from minikube
 # alias kubectl="minikube kubectl --"
 # -------------------------------------------------------------
-
-# This export are for heroku websites
-export SECRET_KEY=<secret_key>
-export DEBUG_VALUE=<debug_value>

@@ -115,8 +115,8 @@ fi
 # running, some other dotfiles, and much more
 
 # Loading dotfiles using for loop:
-# it will load .my_bashrc and .my_aliases always, if this file (.bashrc) runs
-for file in ~/.{my_bashrc,my_aliases}; do
+# it will load .my_bashrc, .my_aliases, and private always, if this file (.bashrc) runs
+for file in ~/.{my_bashrc,my_aliases,my_private}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
