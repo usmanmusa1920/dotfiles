@@ -40,6 +40,7 @@ alias lg='git lg'
 alias ssg='git status'
 alias ga='git add -A' # OR git add .
 alias cgm='git commit -m'
+aliases gpush='git push origin master'
 
 alias jn='jupyter notebook' # launch jupyter notebook --OR-- jupyter notebook
 alias jl='jupyter lab' # launch jupyter lab --OR-- jupyter-lab
