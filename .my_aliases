@@ -46,6 +46,7 @@ alias jn='jupyter notebook' # launch jupyter notebook --OR-- jupyter notebook
 alias jl='jupyter lab' # launch jupyter lab --OR-- jupyter-lab
 alias python='python3'
 alias clr='clear && source ~/.bashrc'
+alias c='clear
 alias ddc='deactivate'
 
 # kubectl alias from minikube
