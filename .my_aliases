@@ -23,31 +23,49 @@
 
 # These are my custom aliases
 # -------------------------------------------------------------
-# for sakyum
+# for activating virtual environment
 alias sv='source venv/bin/activate'
-alias sakyum='cd ~/Desktop/acode/sakyum'
-alias sps='sakyum  && sv && pm'
 
-# for manage.py
+# running django server
 alias pm='python3 manage.py runserver'
+# migrating database changes
 alias pmigrate='python3 manage.py migrate'
+# making database migrations
 alias pmake='python3 manage.py makemigrations'
+# launching my project in python shell
 alias pshell='python3 manage.py shell'
-alias ds='python manage.py shell'
+
+
+# Entering into my project folder
+#     alias <aproject_working_on>='cd ~/Desktop/acode/<project_working_on>'
+
+# Entering into my project folder using the above aliase,
+# activating it vartual environment, and
+# launching up it server (for django)
+#     alias <bproject_name>='<aproject_working_on>  && sv && pm'
+# 
+#     The prototype of the two above alias look like:
+#         alias dfacebook='cd ~/Desktop/acode/facebook'
+#         alias facebook='dfacebook && sv && pm'
+# 
+#           PUT YOUR OWN  HERE...
+# 
+# -------------------------------------------------------------
+
 
 # git short aliases
 alias lg='git lg'
 alias ssg='git status'
 alias ga='git add -A' # OR git add .
 alias cgm='git commit -m'
-aliases gpush='git push origin master'
+alias gpush='git push origin master'
 
 alias jn='jupyter notebook' # launch jupyter notebook --OR-- jupyter notebook
 alias jl='jupyter lab' # launch jupyter lab --OR-- jupyter-lab
 alias python='python3'
-alias clr='clear && source ~/.bashrc'
-alias c='clear
-alias ddc='deactivate'
+alias clr='clear && source ~/.bashrc' # for clearing terminal and sourcing bashrc file
+alias c='clear' # for clearing terminal
+alias ddc='deactivate' # for deactivating virtual environment
 
 # kubectl alias from minikube
 # alias kubectl="minikube kubectl --"
