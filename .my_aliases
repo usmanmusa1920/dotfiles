@@ -37,16 +37,16 @@ alias pshell='python3 manage.py shell'
 
 
 # Entering into my project folder
-#     alias <aproject_working_on>='cd ~/Desktop/acode/<project_working_on>'
+#     alias <project_working_on>='cd ~/Desktop/adev/<project_working_on>'
 
 # Entering into my project folder using the above aliase,
 # activating it vartual environment, and
 # launching up it server (for django)
-#     alias <bproject_name>='<aproject_working_on>  && sv && pm'
+#     alias <project_name[0]pproject_name[0]>='<project_working_on>  && sv && pm'
 # 
 #     The prototype of the two above alias look like:
-#         alias dfacebook='cd ~/Desktop/acode/facebook'
-#         alias facebook='dfacebook && sv && pm'
+#         alias facebook='cd ~/Desktop/adev/facebook'
+#         alias fpf='facebook && sv && pm'
 # 
 #           PUT YOUR OWN  HERE...
 # 
@@ -56,6 +56,8 @@ alias pshell='python3 manage.py shell'
 # git short aliases
 alias lg='git lg'
 alias ssg='git status'
+alias b='git branch -a'
+alias gr='git remote -v'
 alias ga='git add -A' # OR git add .
 alias cgm='git commit -m'
 alias gpush='git push origin master'
