@@ -29,6 +29,9 @@ sudo apt install mysql
 sudo apt install sqlite3
 # ------------------------------------------------
 
+# install sudo
+apt install sudo
+
 # installing some packages
 echo "Installing some packages ..."
 sudo apt-get install apache2
@@ -66,6 +69,11 @@ sudo snap install --classic  minikube
 sudo apt install docker.io
 # the below command basically it launch a sub shell
 # sudo usermod -aG docker $USER && newgrp docker
+
+# You also need to install Docker Compose. See the manual. Here are the commands you need to execute
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)"  -o /usr/local/bin/docker-compose
+sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose
+sudo chmod +x /usr/bin/docker-compose
 
 sudo apt install ansible ansible
 # ------------------------------------------------
