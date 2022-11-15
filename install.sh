@@ -29,6 +29,11 @@ sudo apt install mysql
 sudo apt install sqlite3
 # ------------------------------------------------
 
+# ------------------------------------------------
+# for c++ compiler `gcc (GNU Compiler Collection)`
+sudo apt install gcc
+# ------------------------------------------------
+
 # install sudo
 apt install sudo
 
