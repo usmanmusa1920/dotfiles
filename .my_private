@@ -1,3 +1,5 @@
 # This export are for heroku websites
 export SECRET_KEY=<secret_key>
 export DEBUG_VALUE=<debug_value>
+export GMAIL_APP_PWD=<>
+export MAIL_ADDRESS=<>
