@@ -64,7 +64,13 @@ echo "Snap store apps ..."
 sudo apt install snapd
 sudo snap install snap-store
 
-sudo snap install --classic code # vs_code theme (Andromeda italic)
+sudo snap install --classic code
+  # vs code theme extension of 'Eliver Lara' (Andromeda italic)
+  # C/C++ compiler extension of 'Jun Han' (code runner)
+  # Python extension of 'Microsoft' (Python), it come with jupyter extensions
+  # kite extension of 'Kite' (kite)
+  # yaml formatter extension of 'Red Hat' (YAML)
+  # kubernete extension of 'Microsoft' (Kubernetes)
 
 # for devops
 echo "DevOps installation ..."
