@@ -195,6 +195,21 @@ sudo apt install sqlite3
 # install mysql
 sudo apt-get install mysql-server
 pip install mysqlclient # for working with mysql
+
+# phpmyadmin set-up ==> source: https://www.alibabacloud.com/blog/how-to-set-up-and-secure-phpmyadmin-with-apache-on-ubuntu-16-04_594877
+# Check the OS version by using the below command
+lsb_release -a
+
+# Install the phpmyadmin by using the below command
+apt install phpmyadmin -y
+# symlink
+sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+# enable conf
+sudo a2enconf phpmyadmin.conf
+systemctl reload apache2
+sudo service apache2 restart
+
+# qiskit
 pip install qiskit
 pip install qiskit-aqua
 pip install qiskit[visualization]
