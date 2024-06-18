@@ -1,6 +1,6 @@
 # Dotfiles and system customisation
 
-How I customise my system `Linux Mint` environment (terminal, vs-code, browser, desktop, etc) as I am a developer
+How I customise my system `Linux Mint` & `Ubuntu 24.04 on virtual box 7.0.18` environment (terminal, vs-code, browser, desktop, etc) as I am a developer
 
 ## Extensions
 
@@ -45,9 +45,9 @@ Enter python file an right click, then click on `Format Document` and choose you
 
     use GTK
 
-## Screen shot of some my system environment
+## Screen shot of some my system environment (linux mint)
 
-How my desktop arrangement look
+How my linuxmint desktop arrangement look
 
 ![snippet_theme](LinuxMint-dotfiles/images/desktop-view.png)
 
@@ -62,3 +62,7 @@ How my terminal look when listing docker images
 How my vscode look like
 
 ![snippet_theme](LinuxMint-dotfiles/images/vscode-view.png)
+
+## Ubuntu desktop
+
+![snippet_theme](LinuxMint-dotfiles/images/ubuntu-desktop.png)
