@@ -87,6 +87,13 @@ sudo apt install nodejs
 sudo apt install vim
 
 
+# figlet & lolcat
+sudo apt-get install figlet
+sudo apt install lolcat
+
+Follow this link to setup figlet and lolcat https://medium.com/@usmanmusa1920/custom-header-banner-on-your-terminal-linux-76143d6c4ef3
+
+
 echo "Installing jupyter and math libraries ..."
 # First create a virtual environment with the name `jenv` in your home
 # directory and then install jupyter notebook, jupyter lab and the following libraries
@@ -104,7 +111,8 @@ echo "Install snap store apps ..."
 sudo rm /etc/apt/preferences.d/nosnap.pref
 apt update
 apt install snapd
-# Follow for more: https://linuxmint-user-guide.readthedocs.io/en/latest/snap.html
+
+Follow for more: https://linuxmint-user-guide.readthedocs.io/en/latest/snap.html
 
 # install Snap Store GUI app
 sudo snap install snap-store
@@ -138,11 +146,55 @@ apt update
 
 
 # install virtualbox, see docs:
-# https://www.linuxfordevices.com/tutorials/linux/install-linux-mint-on-virtualbox
 sudo apt install virtualbox
+
+Follow for more: https://www.linuxfordevices.com/tutorials/linux/install-linux-mint-on-virtualbox
 
 # install cheese webcam
 sudo apt install cheese
+
+# install simplescreenrecorder Simple Screen Recorder (SSR)
+
+To get started, open a terminal, and run the following commands:
+
+`sudo apt update`
+
+`sudo apt -y install simplescreenrecorder` or `sudo apt-get install simplescreenrecorder`
+
+Now run the command `simplescreenrecorder` or find it in the Show Applications menu.
+
+_WINDOW 1_
+
+Choose to either record the entire screen, or select Record a fixed rectangle or follow the cursor and then click Select rectangle or Select window to customize the size by drawing a rectangle or clicking on a window.
+
+- Video input:
+    - Record a fixed rectangle: true
+    - Record cursor: true
+- Audio input:
+    - Record audio: true
+    - Backend: PulseAudio
+    - Source: Built-in Audio Analog Stereo
+
+_WINDOW 2_
+
+- File:
+    - Save as: /home/usman/Videos/.mp4
+    - Seperate file per segment: true
+    - Add timestamp: true
+    - Container: MP4
+- Video:
+    - Codec: H.264
+    - Preset: superfast
+    - Allowing frame skipping: true
+- Audio:
+    - Codec: MP3
+    - Bit rate (in kbit/s): 128
+
+Use Record cursor to include the mouse cursor in the recording.
+
+To include sound, select Record audio and choose a source device.
+
+-   Simple Screen Recorder: the simplest way to record screen on Linux https://averagelinuxuser.com/ssr-tutorial/#google_vignette
 
 
 # for devops
@@ -196,7 +248,7 @@ sudo apt install sqlite3
 sudo apt-get install mysql-server
 pip install mysqlclient # for working with mysql
 
-# phpmyadmin set-up ==> source: https://www.alibabacloud.com/blog/how-to-set-up-and-secure-phpmyadmin-with-apache-on-ubuntu-16-04_594877
+Follow phpmyadmin set-up source: https://www.alibabacloud.com/blog/how-to-set-up-and-secure-phpmyadmin-with-apache-on-ubuntu-16-04_594877
 # Check the OS version by using the below command
 lsb_release -a
 
@@ -214,7 +266,9 @@ pip install qiskit
 pip install qiskit-aqua
 pip install qiskit[visualization]
 
-# install postgres (source: https://www.devart.com/dbforge/postgresql/how-to-install-postgresql-on-linux/)
+# install postgres
+Follow source: https://www.devart.com/dbforge/postgresql/how-to-install-postgresql-on-linux/
+
 # To ensure your local package index is up-to-date for your current session, refresh it using the following command:
 sudo apt update
 # Next, install both the PostgreSQL package and the contrib package, which provides additional utilities and features, using the following command:

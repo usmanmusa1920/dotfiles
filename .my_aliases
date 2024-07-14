@@ -28,6 +28,7 @@ alias sv='source venv/bin/activate'
 
 # django aliases
 alias pm='python manage.py runserver'
+alias pim='pm --insecure'
 # migrating database changes
 alias pmigrate='python manage.py migrate'
 # making database migrations

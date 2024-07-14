@@ -45,20 +45,28 @@ Enter python file an right click, then click on `Format Document` and choose you
 
     use GTK
 
-## Screen shot of some my system environment
+## Screen shot of some my system environment (linux mint)
 
-How my desktop arrangement look
+How my linuxmint desktop arrangement look
 
-![snippet_theme](LinuxMint-dotfiles/images/desktop-view.png)
+![screen-shot image](images/desktop-view.png)
 
 How my terminal on browser look
 
-![snippet_theme](LinuxMint-dotfiles/images/terminal-on-browser.png)
+![screen-shot image](images/terminal-on-browser.png)
 
 How my terminal look when listing docker images
 
-![snippet_theme](LinuxMint-dotfiles/images/list-of-docker-images-on-terminal.png)
+![screen-shot image](images/list-of-docker-images-on-terminal.png)
 
 How my vscode look like
 
-![snippet_theme](LinuxMint-dotfiles/images/vscode-view.png)
+![screen-shot image](images/vscode-view.png)
+
+Browser background
+
+![screen-shot image](images/browser_background.jpg)
+
+Ubuntu desktop arrangement
+
+![screen-shot image](images/ubuntu-desktop.png)

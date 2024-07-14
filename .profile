@@ -8,13 +8,15 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-# the below commands will be print if user goto login shel, e.g if he type `tmux`
+# -----------------------------------------------------------------------------------
+# below commands will be print if user goto login shel, e.g if he type `tmux`
 echo '						'
 echo '	..................................................'
 echo '	__________________________________________________'
 echo '	Welcome to login shells `.profile` run 👾 Usman 👾'
 echo '	(login shells `.profile` run)'
 figlet usman -f 3D-ASCII | lolcat
+# -----------------------------------------------------------------------------------
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
