@@ -1,6 +1,6 @@
 # Dotfiles and system customisation
 
-How I customise my system `Linux Mint` environment (terminal, vs-code, browser, desktop, etc) as I am a developer
+How I customise my system `Linux Mint` environment (terminal, vs-code, browser, desktop, etc) as I am a developer, while for `MacOS` it is located in `MacOS-dotfiles` directory of this repository.
 
 ## Extensions
 
