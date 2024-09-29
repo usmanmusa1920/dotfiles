@@ -11,4 +11,5 @@ export GMAIL_APP_PWD="email_app_password"
 export YAHOO_APP_PWD="email_app_password"
 
 export GMAIL_ADDRESS="email_address_1"
+export RECEIVER_GMAIL_ADDRESS="email_address_receiver"
 export YMAIL_ADDRESS="email_address_2"
