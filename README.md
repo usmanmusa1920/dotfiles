@@ -1,4 +1,4 @@
-# Dotfiles and system customisation
+# Dotfiles and system customization
 
 How I customise my system `Linux Mint` environment (terminal, vs-code, browser, desktop, etc) as I am a developer, while for `MacOS` it is located in `MacOS-dotfiles` directory of this repository.
 
@@ -31,7 +31,7 @@ Create a Prettier Configuration file (.prettierrc.json) in ~/Desktop with the be
 
 Enter python file an right click, then click on `Format Document` and choose your python default formatter, mine is `autopep8`
 
-## Terminal customisation
+## Terminal customization
 
     color:     white
     background-color:  #4F1923, transparent (25%)
@@ -41,32 +41,16 @@ Enter python file an right click, then click on `Format Document` and choose you
     jt -t chesterish (for black theme)
     jt -r (for white theme)
 
-## Google chrome theme
+## Google chrome theme & extension
 
-    use GTK
+**Theme:** use GTK
 
-## Screen shot of some my system environment (linux mint)
+**Extension:** Search for `Milky Way Over The Sea`
 
-How my linuxmint desktop arrangement look
+How my terminal look:
 
-![screen-shot image](images/desktop-view.png)
+![screen-shot image](images/terminal.png)
 
-How my terminal on browser look
-
-![screen-shot image](images/terminal-on-browser.png)
-
-How my terminal look when listing docker images
-
-![screen-shot image](images/list-of-docker-images-on-terminal.png)
-
-How my vscode look like
+How my vscode look:
 
 ![screen-shot image](images/vscode-view.png)
-
-Browser background
-
-![screen-shot image](images/browser_background.jpg)
-
-Ubuntu desktop arrangement
-
-![screen-shot image](images/ubuntu-desktop.png)
